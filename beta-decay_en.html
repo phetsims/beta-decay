@@ -33,10 +33,14 @@
         "grunt": "~1.5.3"
       },
       "phet": {
+        "screenNameKeys": [
+          "BETA_DECAY/screen.singleAtom",
+          "BETA_DECAY/screen.multipleAtoms",
+          "BETA_DECAY/screen.decayRates"
+        ],
         "requirejsNamespace": "BETA_DECAY",
         "simulation": true,
         "runnable": true,
-        "readmeCreatedManually": true,
         "supportedBrands": [
           "phet",
           "adapted-from-phet"
@@ -50,16 +54,16 @@
   window.phet.chipper.stringRepos =
     [
       {
+        "repo": "beta-decay",
+        "requirejsNamespace": "BETA_DECAY"
+      },
+      {
         "repo": "joist",
         "requirejsNamespace": "JOIST"
       },
       {
         "repo": "scenery-phet",
         "requirejsNamespace": "SCENERY_PHET"
-      },
-      {
-        "repo": "beta-decay",
-        "requirejsNamespace": "BETA_DECAY"
       },
       {
         "repo": "sun",

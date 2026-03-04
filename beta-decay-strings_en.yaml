@@ -1,2 +1,4 @@
 beta-decay.title: 'Beta Decay'
-screen.name: 'Beta Decay'
+screen.singleAtom: 'Single Atom'
+screen.multipleAtoms: 'Multiple Atoms'
+screen.decayRates: 'Decay Rates'

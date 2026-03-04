@@ -1,33 +1,27 @@
 // Copyright 2026, University of Colorado Boulder
 
 /**
- * TODO Describe this class and its responsibilities.
+ * DecayRatesScreenView is responsible for the visual representation of the Decay Rates Screen in the Beta Decay simulation.
  *
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
 import ScreenView, { ScreenViewOptions } from '../../../../joist/js/ScreenView.js';
-import optionize from '../../../../phet-core/js/optionize.js';
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
 import BetaDecayConstants from '../../common/BetaDecayConstants.js';
 import betaDecay from '../../betaDecay.js';
-import BetaDecayModel from '../model/BetaDecayModel.js';
+import DecayRatesModel from '../model/DecayRatesModel.js';
 
-type SelfOptions = {
- //TODO add options that are specific to BetaDecayScreenView here
-};
+type SelfOptions = EmptySelfOptions;
 
 type BetaDecayScreenViewOptions = SelfOptions & ScreenViewOptions;
 
-export default class BetaDecayScreenView extends ScreenView {
+export default class DecayRatesScreenView extends ScreenView {
 
-  public constructor( model: BetaDecayModel, providedOptions: BetaDecayScreenViewOptions ) {
+  public constructor( model: DecayRatesModel, providedOptions: BetaDecayScreenViewOptions ) {
 
     const options = optionize<BetaDecayScreenViewOptions, SelfOptions, ScreenViewOptions>()( {
-
-      //TODO add default values for optional SelfOptions here
-
-      //TODO add default values for optional ScreenViewOptions here
     }, providedOptions );
 
     super( options );
@@ -48,7 +42,7 @@ export default class BetaDecayScreenView extends ScreenView {
    * Resets the view.
    */
   public reset(): void {
-    //TODO
+    // TO BE IMPLEMENTED
   }
 
   /**
@@ -56,8 +50,8 @@ export default class BetaDecayScreenView extends ScreenView {
    * @param dt - time step, in seconds
    */
   public override step( dt: number ): void {
-    //TODO
+    // TO BE IMPLEMENTED
   }
 }
 
-betaDecay.register( 'BetaDecayScreenView', BetaDecayScreenView );
+betaDecay.register( 'DecayRatesScreenView', DecayRatesScreenView );

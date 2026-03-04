@@ -1,33 +1,32 @@
 // Copyright 2026, University of Colorado Boulder
 
 /**
- * TODO Describe this class and its responsibilities.
+ * MultipleAtomsModel handles the state and behavior of the Multiple Atoms screen in the Beta Decay simulation.
  *
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
 import TModel from '../../../../joist/js/TModel.js';
+import { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
 import { PhetioObjectOptions } from '../../../../tandem/js/PhetioObject.js';
 import betaDecay from '../../betaDecay.js';
 
-type SelfOptions = {
-  //TODO add options that are specific to BetaDecayModel here
-};
+type SelfOptions = EmptySelfOptions;
 
 type BetaDecayModelOptions = SelfOptions & PickRequired<PhetioObjectOptions, 'tandem'>;
 
-export default class BetaDecayModel implements TModel {
+export default class MultipleAtomsModel implements TModel {
 
   public constructor( providedOptions: BetaDecayModelOptions ) {
-    //TODO
+    // TO BE IMPLEMENTED
   }
 
   /**
    * Resets the model.
    */
   public reset(): void {
-    //TODO
+    // TO BE IMPLEMENTED
   }
 
   /**
@@ -35,8 +34,8 @@ export default class BetaDecayModel implements TModel {
    * @param dt - time step, in seconds
    */
   public step( dt: number ): void {
-    //TODO
+    // TO BE IMPLEMENTED
   }
 }
 
-betaDecay.register( 'BetaDecayModel', BetaDecayModel );
+betaDecay.register( 'MultipleAtomsModel', MultipleAtomsModel );

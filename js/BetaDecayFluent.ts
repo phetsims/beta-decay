@@ -23,7 +23,10 @@ const addToMapIfDefined = ( key: string, path: string ) => {
   }
 };
 
-
+addToMapIfDefined( 'beta_decay_title', 'beta-decay.titleStringProperty' );
+addToMapIfDefined( 'screen_singleAtom', 'screen.singleAtomStringProperty' );
+addToMapIfDefined( 'screen_multipleAtoms', 'screen.multipleAtomsStringProperty' );
+addToMapIfDefined( 'screen_decayRates', 'screen.decayRatesStringProperty' );
 
 // A function that creates contents for a new Fluent file, which will be needed if any string changes.
 const createFluentFile = (): string => {
@@ -41,7 +44,9 @@ const BetaDecayFluent = {
     titleStringProperty: _.get( BetaDecayStrings, 'beta-decay.titleStringProperty' )
   },
   screen: {
-    nameStringProperty: _.get( BetaDecayStrings, 'screen.nameStringProperty' )
+    singleAtomStringProperty: _.get( BetaDecayStrings, 'screen.singleAtomStringProperty' ),
+    multipleAtomsStringProperty: _.get( BetaDecayStrings, 'screen.multipleAtomsStringProperty' ),
+    decayRatesStringProperty: _.get( BetaDecayStrings, 'screen.decayRatesStringProperty' )
   }
 };
 

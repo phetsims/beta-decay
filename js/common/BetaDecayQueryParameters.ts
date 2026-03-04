@@ -12,7 +12,7 @@ import { QueryStringMachine } from '../../../query-string-machine/js/QueryString
 import betaDecay from '../betaDecay.js';
 
 const BetaDecayQueryParameters = QueryStringMachine.getAll( {
-  //TODO add schemas for query parameters
+  //TODO add schemas for query parameters https://github.com/phetsims/beta-decay/issues/1
 } );
 
 betaDecay.register( 'BetaDecayQueryParameters', BetaDecayQueryParameters );
