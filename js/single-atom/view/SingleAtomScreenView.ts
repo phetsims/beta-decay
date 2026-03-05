@@ -6,22 +6,22 @@
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
-import ScreenView, { ScreenViewOptions } from '../../../../joist/js/ScreenView.js';
+import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
-import BetaDecayConstants from '../../common/BetaDecayConstants.js';
 import betaDecay from '../../betaDecay.js';
+import BetaDecayConstants from '../../common/BetaDecayConstants.js';
 import SingleAtomModel from '../model/SingleAtomModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type BetaDecayScreenViewOptions = SelfOptions & ScreenViewOptions;
+type BetaDecayScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
 
-export default class SingleAtomScreenView extends ScreenView {
+export default class SingleAtomScreenView extends NuclearDecayScreenView {
 
   public constructor( model: SingleAtomModel, providedOptions: BetaDecayScreenViewOptions ) {
 
-    const options = optionize<BetaDecayScreenViewOptions, SelfOptions, ScreenViewOptions>()( {
+    const options = optionize<BetaDecayScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
     }, providedOptions );
 
     super( options );
