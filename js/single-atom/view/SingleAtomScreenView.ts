@@ -8,20 +8,18 @@
 
 import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
-import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
 import betaDecay from '../../betaDecay.js';
-import BetaDecayConstants from '../../common/BetaDecayConstants.js';
 import SingleAtomModel from '../model/SingleAtomModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type BetaDecayScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
+type SingleAtomScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
 
 export default class SingleAtomScreenView extends NuclearDecayScreenView {
 
-  public constructor( model: SingleAtomModel, providedOptions: BetaDecayScreenViewOptions ) {
+  public constructor( model: SingleAtomModel, providedOptions: SingleAtomScreenViewOptions ) {
 
-    const options = optionize<BetaDecayScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
+    const options = optionize<SingleAtomScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
     }, providedOptions );
 
     super( model, options );

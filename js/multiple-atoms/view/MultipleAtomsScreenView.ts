@@ -8,40 +8,27 @@
 
 import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
-import ResetAllButton from '../../../../scenery-phet/js/buttons/ResetAllButton.js';
 import betaDecay from '../../betaDecay.js';
-import BetaDecayConstants from '../../common/BetaDecayConstants.js';
 import MultipleAtomsModel from '../model/MultipleAtomsModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type BetaDecayScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
+type MultipleAtomsScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
 
 export default class MultipleAtomsScreenView extends NuclearDecayScreenView {
 
-  public constructor( model: MultipleAtomsModel, providedOptions: BetaDecayScreenViewOptions ) {
+  public constructor( model: MultipleAtomsModel, providedOptions: MultipleAtomsScreenViewOptions ) {
 
-    const options = optionize<BetaDecayScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
+    const options = optionize<MultipleAtomsScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
     }, providedOptions );
 
-    super( options );
-
-    const resetAllButton = new ResetAllButton( {
-      listener: () => {
-        model.reset();
-        this.reset();
-      },
-      right: this.layoutBounds.maxX - BetaDecayConstants.SCREEN_VIEW_X_MARGIN,
-      bottom: this.layoutBounds.maxY - BetaDecayConstants.SCREEN_VIEW_Y_MARGIN,
-      tandem: options.tandem.createTandem( 'resetAllButton' )
-    } );
-    this.addChild( resetAllButton );
+    super( model, options );
   }
 
   /**
    * Resets the view.
    */
-  public reset(): void {
+  public override reset(): void {
     // TO BE IMPLEMENTED
   }
 
