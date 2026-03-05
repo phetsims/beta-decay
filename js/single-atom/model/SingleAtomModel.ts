@@ -7,6 +7,7 @@
  */
 
 import TModel from '../../../../joist/js/TModel.js';
+import NuclearDecayModel from '../../../../nuclear-decay-common/js/model/NuclearDecayModel.js';
 import { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
 import { PhetioObjectOptions } from '../../../../tandem/js/PhetioObject.js';
@@ -16,24 +17,10 @@ type SelfOptions = EmptySelfOptions;
 
 type BetaDecayModelOptions = SelfOptions & PickRequired<PhetioObjectOptions, 'tandem'>;
 
-export default class SingleAtomModel implements TModel {
+export default class SingleAtomModel extends NuclearDecayModel {
 
   public constructor( providedOptions: BetaDecayModelOptions ) {
-    // TO BE IMPLEMENTED
-  }
-
-  /**
-   * Resets the model.
-   */
-  public reset(): void {
-    // TO BE IMPLEMENTED
-  }
-
-  /**
-   * Steps the model.
-   * @param dt - time step, in seconds
-   */
-  public step( dt: number ): void {
+    super( providedOptions );
     // TO BE IMPLEMENTED
   }
 }

@@ -1,7 +1,7 @@
 // Copyright 2026, University of Colorado Boulder
 
 /**
- * BetaDecayConstants is the set of constants used throughout the 'Simula Rasa' simulation.
+ * BetaDecayConstants is the set of constants used throughout the 'Beta Decay' simulation.
  *
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */

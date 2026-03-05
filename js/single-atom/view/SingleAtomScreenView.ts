@@ -24,24 +24,13 @@ export default class SingleAtomScreenView extends NuclearDecayScreenView {
     const options = optionize<BetaDecayScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
     }, providedOptions );
 
-    super( options );
-
-    const resetAllButton = new ResetAllButton( {
-      listener: () => {
-        model.reset();
-        this.reset();
-      },
-      right: this.layoutBounds.maxX - BetaDecayConstants.SCREEN_VIEW_X_MARGIN,
-      bottom: this.layoutBounds.maxY - BetaDecayConstants.SCREEN_VIEW_Y_MARGIN,
-      tandem: options.tandem.createTandem( 'resetAllButton' )
-    } );
-    this.addChild( resetAllButton );
+    super( model, options );
   }
 
   /**
    * Resets the view.
    */
-  public reset(): void {
+  public override reset(): void {
     // TO BE IMPLEMENTED
   }
 
