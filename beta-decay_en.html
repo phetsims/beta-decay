@@ -33,15 +33,16 @@
         "grunt": "~1.5.3"
       },
       "phet": {
+        "requirejsNamespace": "BETA_DECAY",
         "phetLibs": [
-          "nuclear-decay-common"
+          "nuclear-decay-common",
+          "shred"
         ],
         "screenNameKeys": [
           "BETA_DECAY/screen.singleAtom",
           "BETA_DECAY/screen.multipleAtoms",
           "BETA_DECAY/screen.decayRates"
         ],
-        "requirejsNamespace": "BETA_DECAY",
         "simulation": true,
         "runnable": true,
         "supportedBrands": [
@@ -71,6 +72,10 @@
       {
         "repo": "scenery-phet",
         "requirejsNamespace": "SCENERY_PHET"
+      },
+      {
+        "repo": "shred",
+        "requirejsNamespace": "SHRED"
       },
       {
         "repo": "sun",
