@@ -12,7 +12,7 @@ import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
 import { PhetioObjectOptions } from '../../../../tandem/js/PhetioObject.js';
 import betaDecay from '../../betaDecay.js';
 
-type SelfOptions = EmptySelfOptions;
+type SelfOptions = EmptySelfOptions;;
 
 type BetaDecayModelOptions = SelfOptions & PickRequired<PhetioObjectOptions, 'tandem'>;
 
