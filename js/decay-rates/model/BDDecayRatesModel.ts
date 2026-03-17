@@ -14,14 +14,14 @@ import betaDecay from '../../betaDecay.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type DecayRatesModelOptions = SelfOptions & PickRequired<PhetioObjectOptions, 'tandem'>;
+type BDDecayRatesModelOptions = SelfOptions & PickRequired<PhetioObjectOptions, 'tandem'>;
 
-export default class DecayRatesModel extends NuclearDecayModel {
+export default class BDDecayRatesModel extends NuclearDecayModel {
 
-  public constructor( providedOptions: DecayRatesModelOptions ) {
+  public constructor( providedOptions: BDDecayRatesModelOptions ) {
     super( providedOptions );
     // TO BE IMPLEMENTED
   }
 }
 
-betaDecay.register( 'DecayRatesModel', DecayRatesModel );
+betaDecay.register( 'BDDecayRatesModel', BDDecayRatesModel );

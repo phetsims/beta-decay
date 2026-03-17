@@ -1,7 +1,7 @@
 // Copyright 2026, University of Colorado Boulder
 
 /**
- * MultipleAtomsScreenView is responsible for the visual representation of the Multiple Atoms Screen in the Beta Decay simulation.
+ * DecayRatesScreenView is responsible for the visual representation of the Decay Rates Screen in the Beta Decay simulation.
  *
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
@@ -9,17 +9,17 @@
 import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import betaDecay from '../../betaDecay.js';
-import MultipleAtomsModel from '../model/MultipleAtomsModel.js';
+import BDDecayRatesModel from '../model/BDDecayRatesModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type MultipleAtomsScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
+type BDDecayRatesScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
 
-export default class MultipleAtomsScreenView extends NuclearDecayScreenView {
+export default class BDDecayRatesScreenView extends NuclearDecayScreenView {
 
-  public constructor( model: MultipleAtomsModel, providedOptions: MultipleAtomsScreenViewOptions ) {
+  public constructor( model: BDDecayRatesModel, providedOptions: BDDecayRatesScreenViewOptions ) {
 
-    const options = optionize<MultipleAtomsScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
+    const options = optionize<BDDecayRatesScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
     }, providedOptions );
 
     super( model, options );
@@ -41,4 +41,4 @@ export default class MultipleAtomsScreenView extends NuclearDecayScreenView {
   }
 }
 
-betaDecay.register( 'MultipleAtomsScreenView', MultipleAtomsScreenView );
+betaDecay.register( 'BDDecayRatesScreenView', BDDecayRatesScreenView );

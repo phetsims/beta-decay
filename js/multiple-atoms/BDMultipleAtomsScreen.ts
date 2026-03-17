@@ -1,38 +1,38 @@
 // Copyright 2026, University of Colorado Boulder
 
 /**
- * The Screen for Single Atom Decay.
+ * The Screen for Multiple Atoms Decay.
  *
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
 import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
-import BetaDecayColors from '../common/BetaDecayColors.js';
 import betaDecay from '../betaDecay.js';
 import BetaDecayFluent from '../BetaDecayFluent.js';
-import SingleAtomModel from './model/SingleAtomModel.js';
-import SingleAtomScreenView from './view/SingleAtomScreenView.js';
+import BetaDecayColors from '../common/BetaDecayColors.js';
+import BDMultipleAtomsModel from './model/BDMultipleAtomsModel.js';
+import BDMultipleAtomsScreenView from './view/BDMultipleAtomsScreenView.js';
 
 type SelfOptions = EmptySelfOptions;
 
 type BetaDecayScreenOptions = SelfOptions & ScreenOptions;
 
-export default class SingleAtomScreen extends Screen<SingleAtomModel, SingleAtomScreenView> {
+export default class BDMultipleAtomsScreen extends Screen<BDMultipleAtomsModel, BDMultipleAtomsScreenView> {
 
   public constructor( providedOptions: BetaDecayScreenOptions ) {
 
     const options = optionize<BetaDecayScreenOptions, SelfOptions, ScreenOptions>()( {
-      name: BetaDecayFluent.screen.singleAtomStringProperty,
+      name: BetaDecayFluent.screen.multipleAtomsStringProperty,
       backgroundColorProperty: BetaDecayColors.screenBackgroundColorProperty
     }, providedOptions );
 
     super(
-      () => new SingleAtomModel( { tandem: options.tandem.createTandem( 'model' ) } ),
-      model => new SingleAtomScreenView( model, { tandem: options.tandem.createTandem( 'view' ) } ),
+      () => new BDMultipleAtomsModel( { tandem: options.tandem.createTandem( 'model' ) } ),
+      model => new BDMultipleAtomsScreenView( model, { tandem: options.tandem.createTandem( 'view' ) } ),
       options
     );
   }
 }
 
-betaDecay.register( 'SingleAtomScreen', SingleAtomScreen );
+betaDecay.register( 'BDMultipleAtomsScreen', BDMultipleAtomsScreen );

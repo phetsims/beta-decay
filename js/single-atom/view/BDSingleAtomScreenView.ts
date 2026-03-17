@@ -9,17 +9,17 @@
 import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import betaDecay from '../../betaDecay.js';
-import SingleAtomModel from '../model/SingleAtomModel.js';
+import BDSingleAtomModel from '../model/BDSingleAtomModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type SingleAtomScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
+type BDSingleAtomScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
 
-export default class SingleAtomScreenView extends NuclearDecayScreenView {
+export default class BDSingleAtomScreenView extends NuclearDecayScreenView {
 
-  public constructor( model: SingleAtomModel, providedOptions: SingleAtomScreenViewOptions ) {
+  public constructor( model: BDSingleAtomModel, providedOptions: BDSingleAtomScreenViewOptions ) {
 
-    const options = optionize<SingleAtomScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
+    const options = optionize<BDSingleAtomScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
     }, providedOptions );
 
     super( model, options );
@@ -41,4 +41,4 @@ export default class SingleAtomScreenView extends NuclearDecayScreenView {
   }
 }
 
-betaDecay.register( 'SingleAtomScreenView', SingleAtomScreenView );
+betaDecay.register( 'BDSingleAtomScreenView', BDSingleAtomScreenView );

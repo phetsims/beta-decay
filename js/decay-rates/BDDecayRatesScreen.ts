@@ -1,38 +1,38 @@
 // Copyright 2026, University of Colorado Boulder
 
 /**
- * The Screen for Multiple Atoms Decay.
+ * The Screen for Decay Rates.
  *
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
 import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
-import BetaDecayColors from '../common/BetaDecayColors.js';
 import betaDecay from '../betaDecay.js';
 import BetaDecayFluent from '../BetaDecayFluent.js';
-import MultipleAtomsModel from './model/MultipleAtomsModel.js';
-import MultipleAtomsScreenView from './view/MultipleAtomsScreenView.js';
+import BetaDecayColors from '../common/BetaDecayColors.js';
+import BDDecayRatesModel from './model/BDDecayRatesModel.js';
+import BDDecayRatesScreenView from './view/BDDecayRatesScreenView.js';
 
 type SelfOptions = EmptySelfOptions;
 
 type BetaDecayScreenOptions = SelfOptions & ScreenOptions;
 
-export default class MultipleAtomsScreen extends Screen<MultipleAtomsModel, MultipleAtomsScreenView> {
+export default class BDDecayRatesScreen extends Screen<BDDecayRatesModel, BDDecayRatesScreenView> {
 
   public constructor( providedOptions: BetaDecayScreenOptions ) {
 
     const options = optionize<BetaDecayScreenOptions, SelfOptions, ScreenOptions>()( {
-      name: BetaDecayFluent.screen.multipleAtomsStringProperty,
+      name: BetaDecayFluent.screen.decayRatesStringProperty,
       backgroundColorProperty: BetaDecayColors.screenBackgroundColorProperty
     }, providedOptions );
 
     super(
-      () => new MultipleAtomsModel( { tandem: options.tandem.createTandem( 'model' ) } ),
-      model => new MultipleAtomsScreenView( model, { tandem: options.tandem.createTandem( 'view' ) } ),
+      () => new BDDecayRatesModel( { tandem: options.tandem.createTandem( 'model' ) } ),
+      model => new BDDecayRatesScreenView( model, { tandem: options.tandem.createTandem( 'view' ) } ),
       options
     );
   }
 }
 
-betaDecay.register( 'MultipleAtomsScreen', MultipleAtomsScreen );
+betaDecay.register( 'BDDecayRatesScreen', BDDecayRatesScreen );
