@@ -6,8 +6,6 @@
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
-import betaDecay from '../betaDecay.js';
-
 export default class BetaDecayConstants {
 
   private constructor() {
@@ -17,5 +15,3 @@ export default class BetaDecayConstants {
   public static readonly SCREEN_VIEW_X_MARGIN = 15;
   public static readonly SCREEN_VIEW_Y_MARGIN = 15;
 }
-
-betaDecay.register( 'BetaDecayConstants', BetaDecayConstants );

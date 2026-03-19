@@ -9,13 +9,10 @@
 
 import logGlobal from '../../../phet-core/js/logGlobal.js';
 import { QueryStringMachine } from '../../../query-string-machine/js/QueryStringMachineModule.js';
-import betaDecay from '../betaDecay.js';
 
 const BetaDecayQueryParameters = QueryStringMachine.getAll( {
   //TODO add schemas for query parameters https://github.com/phetsims/beta-decay/issues/1
 } );
-
-betaDecay.register( 'BetaDecayQueryParameters', BetaDecayQueryParameters );
 
 // Log query parameters
 logGlobal( 'phet.chipper.queryParameters' );

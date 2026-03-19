@@ -8,7 +8,6 @@
 
 import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
-import betaDecay from '../../betaDecay.js';
 import BDSingleAtomModel from '../model/BDSingleAtomModel.js';
 
 type SelfOptions = EmptySelfOptions;
@@ -40,5 +39,3 @@ export default class BDSingleAtomScreenView extends NuclearDecayScreenView {
     // TO BE IMPLEMENTED
   }
 }
-
-betaDecay.register( 'BDSingleAtomScreenView', BDSingleAtomScreenView );

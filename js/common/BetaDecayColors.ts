@@ -28,6 +28,3 @@ export default class BetaDecayColors {
     default: 'white'
   } );
 }
-
-
-betaDecay.register( 'BetaDecayColors', BetaDecayColors );

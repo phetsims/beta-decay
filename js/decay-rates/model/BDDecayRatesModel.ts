@@ -10,7 +10,6 @@ import NuclearDecayModel from '../../../../nuclear-decay-common/js/model/Nuclear
 import { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
 import { PhetioObjectOptions } from '../../../../tandem/js/PhetioObject.js';
-import betaDecay from '../../betaDecay.js';
 
 type SelfOptions = EmptySelfOptions;
 
@@ -23,5 +22,3 @@ export default class BDDecayRatesModel extends NuclearDecayModel {
     // TO BE IMPLEMENTED
   }
 }
-
-betaDecay.register( 'BDDecayRatesModel', BDDecayRatesModel );

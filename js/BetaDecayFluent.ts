@@ -51,5 +51,3 @@ const BetaDecayFluent = {
 };
 
 export default BetaDecayFluent;
-
-betaDecay.register('BetaDecayFluent', BetaDecayFluent);

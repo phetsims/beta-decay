@@ -8,7 +8,6 @@
 
 import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
-import betaDecay from '../betaDecay.js';
 import BetaDecayFluent from '../BetaDecayFluent.js';
 import BetaDecayColors from '../common/BetaDecayColors.js';
 import BDMultipleAtomsModel from './model/BDMultipleAtomsModel.js';
@@ -34,5 +33,3 @@ export default class BDMultipleAtomsScreen extends Screen<BDMultipleAtomsModel, 
     );
   }
 }
-
-betaDecay.register( 'BDMultipleAtomsScreen', BDMultipleAtomsScreen );

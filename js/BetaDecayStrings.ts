@@ -24,6 +24,4 @@ type StringsType = {
 
 const BetaDecayStrings = getStringModule( 'BETA_DECAY' ) as StringsType;
 
-betaDecay.register( 'BetaDecayStrings', BetaDecayStrings );
-
 export default BetaDecayStrings;
