@@ -6,19 +6,19 @@
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
-import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
+import BetaDecayScreenView, { BetaDecayScreenViewOptions } from '../../common/view/BetaDecayScreenView.js';
 import BDMultipleAtomsModel from '../model/BDMultipleAtomsModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type BDMultipleAtomsScreenViewOptions = SelfOptions & NuclearDecayScreenViewOptions;
+type BDMultipleAtomsScreenViewOptions = SelfOptions & BetaDecayScreenViewOptions;
 
-export default class BDMultipleAtomsScreenView extends NuclearDecayScreenView {
+export default class BDMultipleAtomsScreenView extends BetaDecayScreenView {
 
   public constructor( model: BDMultipleAtomsModel, providedOptions: BDMultipleAtomsScreenViewOptions ) {
 
-    const options = optionize<BDMultipleAtomsScreenViewOptions, SelfOptions, NuclearDecayScreenViewOptions>()( {
+    const options = optionize<BDMultipleAtomsScreenViewOptions, SelfOptions, BetaDecayScreenViewOptions>()( {
     }, providedOptions );
 
     super( model, options );

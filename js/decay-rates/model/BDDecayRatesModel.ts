@@ -6,19 +6,22 @@
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
-import NuclearDecayModel from '../../../../nuclear-decay-common/js/model/NuclearDecayModel.js';
-import { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
+import { NuclearDecayModelOptions } from '../../../../nuclear-decay-common/js/model/NuclearDecayModel.js';
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import PickRequired from '../../../../phet-core/js/types/PickRequired.js';
 import { PhetioObjectOptions } from '../../../../tandem/js/PhetioObject.js';
+import BetaDecayModel from '../../common/model/BetaDecayModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type BDDecayRatesModelOptions = SelfOptions & PickRequired<PhetioObjectOptions, 'tandem'>;
+type BDDecayRatesModelOptions = SelfOptions & NuclearDecayModelOptions & PickRequired<PhetioObjectOptions, 'tandem'>;
 
-export default class BDDecayRatesModel extends NuclearDecayModel {
+export default class BDDecayRatesModel extends BetaDecayModel {
 
   public constructor( providedOptions: BDDecayRatesModelOptions ) {
-    super( providedOptions );
-    // TO BE IMPLEMENTED
+    const options = optionize<BDDecayRatesModelOptions, SelfOptions, NuclearDecayModelOptions>()( {
+    }, providedOptions );
+
+    super( options );
   }
 }
