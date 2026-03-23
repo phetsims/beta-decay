@@ -7,7 +7,7 @@
 
 import NuclearDecayScreenView, { NuclearDecayScreenViewOptions } from '../../../../nuclear-decay-common/js/view/NuclearDecayScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
-import BetaDecayModel from '../model/BetaDecayModel.js';
+import BetaDecayModel, { BDSelectableIsotopes } from '../model/BetaDecayModel.js';
 
 type SelfOptions = EmptySelfOptions;
 
