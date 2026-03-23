@@ -6,10 +6,14 @@
  */
 
 import Property from '../../../../axon/js/Property.js';
-import NuclearDecayModel, { BDSelectableIsotopes, BDSelectableIsotopesValues, NuclearDecayModelOptions } from '../../../../nuclear-decay-common/js/model/NuclearDecayModel.js';
+import NuclearDecayModel, { NuclearDecayModelOptions } from '../../../../nuclear-decay-common/js/model/NuclearDecayModel.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 
 type SelfOptions = EmptySelfOptions;
+
+// Selectable isotopes in beta-decay
+export const BDSelectableIsotopesValues = [ 'custom', 'hydrogen-3', 'carbon-14' ] as const;
+export type BDSelectableIsotopes = ( typeof BDSelectableIsotopesValues )[ number ];
 
 export type BetaDecayModelOptions = SelfOptions & NuclearDecayModelOptions;
 
