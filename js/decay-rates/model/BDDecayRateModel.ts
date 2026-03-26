@@ -1,7 +1,7 @@
 // Copyright 2026, University of Colorado Boulder
 
 /**
- * DecayRatesModel handles the state and behavior of the Decay Rates screen in the Beta Decay simulation.
+ * DecayRateModel handles the state and behavior of the Decay Rates screen in the Beta Decay simulation.
  *
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
@@ -12,12 +12,12 @@ import BetaDecayModel, { BetaDecayModelOptions } from '../../common/model/BetaDe
 
 type SelfOptions = EmptySelfOptions;
 
-type BDDecayRatesModelOptions = SelfOptions & BetaDecayModelOptions;
+type BDDecayRateModelOptions = SelfOptions & BetaDecayModelOptions;
 
-export default class BDDecayRatesModel extends BetaDecayModel {
+export default class BDDecayRateModel extends BetaDecayModel {
 
-  public constructor( providedOptions: BDDecayRatesModelOptions ) {
-    const options = optionize<BDDecayRatesModelOptions, SelfOptions, NuclearDecayModelOptions>()( {
+  public constructor( providedOptions: BDDecayRateModelOptions ) {
+    const options = optionize<BDDecayRateModelOptions, SelfOptions, NuclearDecayModelOptions>()( {
     }, providedOptions );
 
     super( options );

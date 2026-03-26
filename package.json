@@ -18,7 +18,7 @@
     "screenNameKeys": [
       "BETA_DECAY/screen.singleAtom",
       "BETA_DECAY/screen.multipleAtoms",
-      "BETA_DECAY/screen.decayRates"
+      "BETA_DECAY/screen.decayRate"
     ],
     "simulation": true,
     "runnable": true,

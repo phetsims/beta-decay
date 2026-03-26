@@ -18,10 +18,12 @@ type StringsType = {
   'screen': {
     'singleAtomStringProperty': LocalizedStringProperty;
     'multipleAtomsStringProperty': LocalizedStringProperty;
-    'decayRatesStringProperty': LocalizedStringProperty;
+    'decayRateStringProperty': LocalizedStringProperty;
   }
 };
 
 const BetaDecayStrings = getStringModule( 'BETA_DECAY' ) as StringsType;
+
+betaDecay.register( 'BetaDecayStrings', BetaDecayStrings );
 
 export default BetaDecayStrings;

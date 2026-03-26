@@ -11,7 +11,7 @@ import simLauncher from '../../joist/js/simLauncher.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import BetaDecayFluent from './BetaDecayFluent.js';
 import './common/BetaDecayQueryParameters.js';
-import BDDecayRatesScreen from './decay-rates/BDDecayRatesScreen.js';
+import BDDecayRateScreen from './decay-rates/BDDecayRateScreen.js';
 import BDMultipleAtomsScreen from './multiple-atoms/BDMultipleAtomsScreen.js';
 import BDSingleAtomScreen from './single-atom/BDSingleAtomScreen.js';
 
@@ -24,7 +24,7 @@ simLauncher.launch( () => {
   const screens = [
     new BDSingleAtomScreen( { tandem: Tandem.ROOT.createTandem( 'singleAtomScreen' ) } ),
     new BDMultipleAtomsScreen( { tandem: Tandem.ROOT.createTandem( 'multipleAtomsScreen' ) } ),
-    new BDDecayRatesScreen( { tandem: Tandem.ROOT.createTandem( 'decayRatesScreen' ) } )
+    new BDDecayRateScreen( { tandem: Tandem.ROOT.createTandem( 'decayRateScreen' ) } )
   ];
 
   const options: SimOptions = {

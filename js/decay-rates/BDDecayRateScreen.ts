@@ -10,25 +10,25 @@ import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
 import BetaDecayFluent from '../BetaDecayFluent.js';
 import BetaDecayColors from '../common/BetaDecayColors.js';
-import BDDecayRatesModel from './model/BDDecayRatesModel.js';
-import BDDecayRatesScreenView from './view/BDDecayRatesScreenView.js';
+import BDDecayRateModel from './model/BDDecayRateModel.js';
+import BDDecayRateScreenView from './view/BDDecayRateScreenView.js';
 
 type SelfOptions = EmptySelfOptions;
 
 type BetaDecayScreenOptions = SelfOptions & ScreenOptions;
 
-export default class BDDecayRatesScreen extends Screen<BDDecayRatesModel, BDDecayRatesScreenView> {
+export default class BDDecayRateScreen extends Screen<BDDecayRateModel, BDDecayRateScreenView> {
 
   public constructor( providedOptions: BetaDecayScreenOptions ) {
 
     const options = optionize<BetaDecayScreenOptions, SelfOptions, ScreenOptions>()( {
-      name: BetaDecayFluent.screen.decayRatesStringProperty,
+      name: BetaDecayFluent.screen.decayRateStringProperty,
       backgroundColorProperty: BetaDecayColors.screenBackgroundColorProperty
     }, providedOptions );
 
     super(
-      () => new BDDecayRatesModel( { tandem: options.tandem.createTandem( 'model' ) } ),
-      model => new BDDecayRatesScreenView( model, { tandem: options.tandem.createTandem( 'view' ) } ),
+      () => new BDDecayRateModel( { tandem: options.tandem.createTandem( 'model' ) } ),
+      model => new BDDecayRateScreenView( model, { tandem: options.tandem.createTandem( 'view' ) } ),
       options
     );
   }
