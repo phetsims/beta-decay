@@ -18,7 +18,7 @@ export default class BDSingleAtomModel extends BetaDecayModel {
 
   public constructor( providedOptions: BDSingleAtomModelOptions ) {
     const options = optionize<BDSingleAtomModelOptions, SelfOptions, NuclearDecayModelOptions>()( {
-      singleAtomModel: true
+      maxNumberOfAtoms: 1
     }, providedOptions );
 
     super( options );

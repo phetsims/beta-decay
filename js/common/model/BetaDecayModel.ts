@@ -34,5 +34,11 @@ export default class BetaDecayModel extends NuclearDecayModel {
     this.selectableIsotopes = [ ...BDSelectableIsotopesValues ];
 
     this.selectedIsotopeProperty = new Property<SelectableIsotopes>( 'hydrogen-3' );
+
+    this.selectedIsotopeProperty.link( selectedIsotope => {
+      if ( selectedIsotope !== 'custom' ) {
+        this.selectedHalflifeProperty.value = NuclearDecayModel.getHalfLife( selectedIsotope );
+      }
+    } );
   }
 }
