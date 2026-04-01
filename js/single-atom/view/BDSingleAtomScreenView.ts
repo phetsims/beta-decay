@@ -23,19 +23,4 @@ export default class BDSingleAtomScreenView extends BetaDecayScreenView {
 
     super( model, options );
   }
-
-  /**
-   * Resets the view.
-   */
-  public override reset(): void {
-    // TO BE IMPLEMENTED
-  }
-
-  /**
-   * Steps the view.
-   * @param dt - time step, in seconds
-   */
-  public override step( dt: number ): void {
-    // TO BE IMPLEMENTED
-  }
 }
