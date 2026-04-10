@@ -6,6 +6,10 @@
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
+// Selectable isotopes in beta-decay
+const BDSelectableIsotopesValues = [ 'custom', 'hydrogen-3', 'carbon-14' ] as const;
+export type BDSelectableIsotopes = ( typeof BDSelectableIsotopesValues )[ number ];
+
 export default class BetaDecayConstants {
 
   private constructor() {
@@ -14,4 +18,6 @@ export default class BetaDecayConstants {
 
   public static readonly SCREEN_VIEW_X_MARGIN = 15;
   public static readonly SCREEN_VIEW_Y_MARGIN = 15;
+
+  public static readonly SELECTABLE_ISOTOPES = [ ...BDSelectableIsotopesValues ];
 }

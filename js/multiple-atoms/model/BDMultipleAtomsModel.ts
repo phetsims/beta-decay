@@ -6,20 +6,20 @@
  * @author Agustín Vallejo (PhET Interactive Simulations)
  */
 
-import { NuclearDecayModelOptions } from '../../../../nuclear-decay-common/js/model/NuclearDecayModel.js';
+import MultipleAtomDecayModel, { MultipleAtomDecayModelOptions } from '../../../../nuclear-decay-common/js/model/MultipleAtomDecayModel.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
-import BetaDecayModel, { BetaDecayModelOptions } from '../../common/model/BetaDecayModel.js';
+import BetaDecayConstants from '../../common/BetaDecayConstants.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type BDMultipleAtomsModelOptions = SelfOptions & BetaDecayModelOptions;
+type BDMultipleAtomsModelOptions = SelfOptions & MultipleAtomDecayModelOptions;
 
-export default class BDMultipleAtomsModel extends BetaDecayModel {
+export default class BDMultipleAtomsModel extends MultipleAtomDecayModel {
 
   public constructor( providedOptions: BDMultipleAtomsModelOptions ) {
-    const options = optionize<BDMultipleAtomsModelOptions, SelfOptions, NuclearDecayModelOptions>()( {
+    const options = optionize<BDMultipleAtomsModelOptions, SelfOptions, MultipleAtomDecayModelOptions>()( {
     }, providedOptions );
 
-    super( options );
+    super( BetaDecayConstants.SELECTABLE_ISOTOPES, options );
   }
 }
