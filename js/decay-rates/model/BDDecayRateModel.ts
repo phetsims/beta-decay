@@ -21,5 +21,7 @@ export default class BDDecayRateModel extends DecayRateModel {
     }, providedOptions );
 
     super( BetaDecayConstants.SELECTABLE_ISOTOPES, options );
+
+    this.selectedIsotopeProperty.value = 'hydrogen-3';
   }
 }

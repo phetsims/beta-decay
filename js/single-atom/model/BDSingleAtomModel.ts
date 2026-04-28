@@ -22,5 +22,7 @@ export default class BDSingleAtomModel extends SingleAtomDecayModel {
     }, providedOptions );
 
     super( BetaDecayConstants.SELECTABLE_ISOTOPES, options );
+
+    this.selectedIsotopeProperty.value = 'hydrogen-3';
   }
 }
