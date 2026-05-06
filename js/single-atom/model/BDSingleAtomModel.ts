@@ -21,7 +21,7 @@ export default class BDSingleAtomModel extends SingleAtomModel {
       maxNumberOfAtoms: 1
     }, providedOptions );
 
-    super( BetaDecayConstants.SELECTABLE_ISOTOPES, options );
+    super( BetaDecayConstants.SELECTABLE_ISOTOPES, 'betaMinusDecay', options );
 
     this.selectedIsotopeProperty.setInitialValue( 'hydrogen-3' );
     this.selectedIsotopeProperty.reset();

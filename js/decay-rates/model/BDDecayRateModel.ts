@@ -20,7 +20,7 @@ export default class BDDecayRateModel extends DecayRateModel {
     const options = optionize<BDDecayRateModelOptions, SelfOptions, DecayRateModelOptions>()( {
     }, providedOptions );
 
-    super( BetaDecayConstants.SELECTABLE_ISOTOPES, options );
+    super( BetaDecayConstants.SELECTABLE_ISOTOPES, 'betaMinusDecay', options );
 
     this.selectedIsotopeProperty.setInitialValue( 'hydrogen-3' );
     this.selectedIsotopeProperty.reset();

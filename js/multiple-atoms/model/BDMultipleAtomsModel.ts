@@ -20,7 +20,7 @@ export default class BDMultipleAtomsModel extends MultipleAtomsModel {
     const options = optionize<BDMultipleAtomsModelOptions, SelfOptions, MultipleAtomDecayModelOptions>()( {
     }, providedOptions );
 
-    super( BetaDecayConstants.SELECTABLE_ISOTOPES, options );
+    super( BetaDecayConstants.SELECTABLE_ISOTOPES, 'betaMinusDecay', options );
 
     this.selectedIsotopeProperty.setInitialValue( 'hydrogen-3' );
     this.selectedIsotopeProperty.reset();
