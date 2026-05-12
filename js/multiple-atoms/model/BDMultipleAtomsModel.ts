@@ -18,6 +18,7 @@ export default class BDMultipleAtomsModel extends MultipleAtomsModel {
 
   public constructor( providedOptions: BDMultipleAtomsModelOptions ) {
     const options = optionize<BDMultipleAtomsModelOptions, SelfOptions, MultipleAtomDecayModelOptions>()( {
+      useStopwatch: true
     }, providedOptions );
 
     super( BetaDecayConstants.SELECTABLE_ISOTOPES, 'betaMinusDecay', options );
